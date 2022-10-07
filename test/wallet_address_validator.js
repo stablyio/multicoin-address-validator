@@ -531,7 +531,7 @@ describe('WAValidator.validate()', function () {
             valid('ak_8QxnP9qXP3NpA4fskYZE7P1GfHzKZAMmoNuok7jJC5NqVYi21', 'ae')
         });
 
-		it('should return true for correct Ardor addresses', () => {
+        it('should return true for correct Ardor addresses', () => {
             valid('ARDOR-HFNE-E2VE-SMV3-DCRZ8', 'ardr')
         });
 
@@ -874,8 +874,9 @@ describe('WAValidator.validate()', function () {
             valid('0.0.16952', 'hbar')
         });
 
-        it('should return true for incorrect ICON addresses', () => {
+        it('should return true for correct ICON addresses', () => {
             valid('hxf5a52d659df00ef0517921647516daaf7502a728', 'icx')
+            valid('hx7498b6b4b6da57f8880332aea80555aa6b115bd6', 'icx')
         });
 
         it('should return true for correct IOST addresses', () => {
@@ -1604,7 +1605,7 @@ describe('invalid results', function () {
     });
 
     it('should return false for incorrect binance smart chain address', function () {
-        // this is a bep-2 address
+        // this is a bep-2 binance address (bnb)
         invalid('bnb1xlvns0n2mxh77mzaspn2hgav4rr4m8eerfju38', 'bsc');
     });
 

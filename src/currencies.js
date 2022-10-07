@@ -592,6 +592,10 @@ var CURRENCIES = [{
         symbol: 'xlm',
         validator: XLMValidator,
     }, {
+        name: 'BTU Protocol',
+        symbol: 'btu',
+        validator: ETHValidator,
+    }, {
         name: 'Crypto.com Coin',
         symbol: 'cro',
         bech32Hrp: { prod: ['cro'], testnet: ['tcro']},
@@ -603,6 +607,14 @@ var CURRENCIES = [{
     //     validator: ETHValidator,
     // },
     {
+        name: 'Multi-collateral DAI',
+        symbol: 'dai',
+        validator: ETHValidator,
+    }, {
+        name: 'Enjin Coin',
+        symbol: 'enj',
+        validator: ETHValidator,
+    }, {
         name: 'HedgeTrade',
         symbol: 'hedg',
         validator: ETHValidator,
@@ -617,6 +629,10 @@ var CURRENCIES = [{
     }, {
         name: 'Loom Network',
         symbol: 'loom',
+        validator: ETHValidator,
+    }, {
+        name: 'Maker',
+        symbol: 'mkr',
         validator: ETHValidator,
     }, {
         name: 'Metal',
@@ -746,95 +762,81 @@ var CURRENCIES = [{
         name: 'VeChain',
         symbol: 'vet',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'StormX',
         symbol: 'stmx',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'AugurV2',
         symbol: 'repv2',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'FirmaChain',
         symbol: 'fct',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'BlockTrade',
         symbol: 'btt',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Quantum Resistant Ledger',
         symbol: 'qrl',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Serve',
         symbol: 'serv',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Tap',
         symbol: 'xtp',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Compound',
         symbol: 'comp',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Paxos',
         symbol: 'pax',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'USD Coin',
         symbol: 'usdc',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'CUSD',
         symbol: 'cusd',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Algorand',
         symbol: 'algo',
         validator: AlgoValidator
-    },
-    {
+    }, {
         name: 'Polkadot',
         symbol: 'dot',
         validator: DotValidator
-    },
-    {
+    }, {
         name: 'Uniswap Coin',
         symbol: 'uni',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Aave Coin',
         symbol: 'aave',
         validator: ETHValidator
-    },
-    {
+    }, {
         name: 'Matic',
         symbol: 'matic',
         validator: ETHValidator
-    },
-    {
+    }, {
+        name: 'Decentraland',
+        symbol: 'mana',
+        validator: ETHValidator,
+    }, {
         name: 'Solana',
         symbol: 'sol',
         validator: Base58Validator,
         maxLength: 44,
         minLength: 43
-    },
-    {
+    }, {
         name: 'Fortuna',
         symbol: 'fota',
         validator: ETHValidator,
@@ -964,14 +966,6 @@ var CURRENCIES = [{
     }, {
         name: 'Lunyr',
         symbol: 'lun',
-        validator: ETHValidator,
-    }, {
-        name: 'Decentraland',
-        symbol: 'mana',
-        validator: ETHValidator,
-    }, {
-        name: 'Matic Network',
-        symbol: 'matic',
         validator: ETHValidator,
     }, {
         name: 'MCO',
@@ -1260,22 +1254,6 @@ var CURRENCIES = [{
         name: 'Scopuly',
         symbol: 'sky',
         validator: XLMValidator,
-    }, {
-        name: 'BTU Protocol',
-        symbol: 'btu',
-        validator: ETHValidator,
-    },{
-        name: 'Multi-collateral DAI',
-        symbol: 'dai',
-        validator: ETHValidator,
-    }, {
-        name: 'Enjin Coin',
-        symbol: 'enj',
-        validator: ETHValidator,
-    }, {
-        name: 'Maker',
-        symbol: 'mkr',
-        validator: ETHValidator,
     },
     // {
     //    name: 'PitisCoin',
