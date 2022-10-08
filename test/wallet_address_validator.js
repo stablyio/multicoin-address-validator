@@ -320,6 +320,7 @@ describe('WAValidator.validate()', function () {
 
         it('should return true for correct binance chain (Bep-2) address', function () {
             valid('bnb1xlvns0n2mxh77mzaspn2hgav4rr4m8eerfju38', 'bnb');
+            valid('bnb1xlvns0n2mxh77mzaspn2hgav4rr4m8eerfju38', 'binancechain');
             // testnet bnb address
             valid('tbnb17lhacayu5jwpmndvt05zhldjhwat76pkkhmmrg', 'bnb');
         });
@@ -330,6 +331,8 @@ describe('WAValidator.validate()', function () {
             valid('r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV', 'XRP');
             valid('rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh', 'XRP');
             valid('rDTXLQ7ZKZVKz33zJbHjgVShjsBnqMBhmN', 'XRP');
+            valid('rDTXLQ7ZKZVKz33zJbHjgVShjsBnqMBhmN', 'XRPL');
+            valid('rDTXLQ7ZKZVKz33zJbHjgVShjsBnqMBhmN', 'xrpl');
         });
 
         it('should return true for correct dash addresses', function () {
@@ -913,6 +916,15 @@ describe('WAValidator.validate()', function () {
             valid('xch1w0mjfntrxz79uacsfarm4jukqegewcgzyduw8k9fcc70lnls24ms8gax6y', 'xch')
             // testnet
             valid('txch16rdrw2lktf729jtz0kc0hjuzr65akgx9d56j74f0xfsemp08njuq2a4j5e', 'xch')
+        });
+
+        it('should return true for correct Harmony addresses', function () {
+            // ETH format
+            valid('0x2855FE586702Cf1233e3f4B3e946c5F5B9634ce2', 'one');
+            valid('0x664FE9758008B398Dd5366BeCf07cF344ae5CC52', 'one');
+            // ONE format
+            valid('one1gu0kda66ly3c5taz8w3rsc44j4csn7epatrzvl', 'one');
+            valid('one1ve87javqpzee3h2nv6lv7p70x39wtnzjg4vx80', 'one');
         });
 
     });
@@ -1653,10 +1665,16 @@ describe('invalid results', function () {
        invalid('0xda816e2122a8a39b0926bfa84edd3d42477e9efE', 'zil')
    });
 
-   it('should return false for correct Chia addresses', () => {
+   it('should return false for incorrect Chia addresses', () => {
        invalid('zil1pk6fe395e9lfkglv0m70daezm5en0t62hty7f7', 'xch')
        invalid('bnb1ed7yctrag8s5su35qs6pxjzfzwng9hnt3txd5gvkkr0rg9serq4sp9g6n5', 'xch')
        invalid('thisisnotvalid0923492349239492349003jasdf90asd9adf92022123hnk3', 'xch')
+   });
+
+   it('should return false for incorrect Harmony addresses', () => {
+       invalid('0x000000000000000000000000000000000000000', 'one');
+       invalid('tone1gu0kda66ly3c5taz8w3rsc44j4csn7epatrzvl', 'one');
+       invalid('xone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5', 'one');
    });
 
 });

@@ -19,6 +19,8 @@ var BIP173Validator = require('./bip173_validator')
 var Base58Validator = require('./base58_validator')
 // Chia
 var ChiaValidator = require('./chia_validator')
+// Harmony
+var HarmonyValidator = require('./harmony_validator')
 // from trezor
 var AEValidator = require('./ae_validator');
 var ARDRValidator = require('./ardr_validator');
@@ -239,6 +241,10 @@ var CURRENCIES = [{
     }, {
         name: 'Ripple',
         symbol: 'xrp',
+        validator: XRPValidator,
+    }, {
+        name: 'XRPL',
+        symbol: 'xrpl',
         validator: XRPValidator,
     }, {
         name: 'Dash',
@@ -837,6 +843,10 @@ var CURRENCIES = [{
         symbol: 'bnb',
         validator: BinanceValidator,
     }, {
+        name: 'BinanceChain',
+        symbol: 'bnb',
+        validator: BinanceValidator,
+    }, {
         name: 'Binance Smart Chain',
         symbol: 'bsc',
         validator: ETHValidator,
@@ -1031,11 +1041,13 @@ var CURRENCIES = [{
         name: 'OAX',
         symbol: 'oax',
         validator: ETHValidator,
-    }, {
-        name: 'Menlo One',
-        symbol: 'one',
-        validator: ETHValidator,
-    }, {
+    }, 
+    // {
+    //     name: 'Menlo One',
+    //     symbol: 'one', // clashes with Harmony one
+    //     validator: ETHValidator,
+    // }, 
+    {
         name: 'SoMee.Social',
         symbol: 'ong',
         validator: ETHValidator,
@@ -1284,8 +1296,11 @@ var CURRENCIES = [{
     }, {
         name: 'Chia',
         symbol: 'xch',
-        addressTypes: { prod: ['xch'], testnet: ['txch'] },
         validator: ChiaValidator
+    }, {
+        name: 'Harmony',
+        symbol: 'one',
+        validator: HarmonyValidator
     }
 ];
 
