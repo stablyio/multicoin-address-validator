@@ -907,6 +907,14 @@ describe('WAValidator.validate()', function () {
             valid('zil1pk6fe395e9lfkglv0m70daezm5en0t62hty7f7', 'zil')
         });
 
+        it('should return true for correct Chia addresses', () => {
+            valid('xch16rdrw2lktf729jtz0kc0hjuzr65akgx9d56j74f0xfsemp08njuq2a4j5e', 'xch')
+            valid('xch1ed7yctrag8s5su35qs6pxjzfzwng9hnt3txd5gvkkr0rg9serq4sp9g6n5', 'xch')
+            valid('xch1w0mjfntrxz79uacsfarm4jukqegewcgzyduw8k9fcc70lnls24ms8gax6y', 'xch')
+            // testnet
+            valid('txch16rdrw2lktf729jtz0kc0hjuzr65akgx9d56j74f0xfsemp08njuq2a4j5e', 'xch')
+        });
+
     });
 
     describe('invalid results', function () {
@@ -1643,6 +1651,12 @@ describe('invalid results', function () {
 
    it('should return false for incorrect Zilliqa addresses', () => {
        invalid('0xda816e2122a8a39b0926bfa84edd3d42477e9efE', 'zil')
+   });
+
+   it('should return false for correct Chia addresses', () => {
+       invalid('zil1pk6fe395e9lfkglv0m70daezm5en0t62hty7f7', 'xch')
+       invalid('bnb1ed7yctrag8s5su35qs6pxjzfzwng9hnt3txd5gvkkr0rg9serq4sp9g6n5', 'xch')
+       invalid('thisisnotvalid0923492349239492349003jasdf90asd9adf92022123hnk3', 'xch')
    });
 
 });

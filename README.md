@@ -96,6 +96,7 @@ npm install multicoin-address-validator
 * Cardano/ada `'Cardano'` or `'ada'`
 * Celer Netw or k/celr `'Celer Netw or k'` or `'celr'`
 * Chainlink/link `'Chainlink'` or `'link'`
+* Chia/xch `'Chia'` or `'xch'`
 * Chiliz/chz `'Chiliz'` or `'chz'`
 * Chronobank/time `'Chronobank'` or `'time'`
 * Cindicat or /cnd `'Cindicat or '` or `'cnd'`

@@ -17,6 +17,8 @@ var AlgoValidator = require('./algo_validator');
 var DotValidator = require('./dot_validator');
 var BIP173Validator = require('./bip173_validator')
 var Base58Validator = require('./base58_validator')
+// Chia
+var ChiaValidator = require('./chia_validator')
 // from trezor
 var AEValidator = require('./ae_validator');
 var ARDRValidator = require('./ardr_validator');
@@ -1279,7 +1281,12 @@ var CURRENCIES = [{
         name: 'Zilliqa',
         symbol: 'zil',
         validator: ZILValidator
-	}
+    }, {
+        name: 'Chia',
+        symbol: 'xch',
+        addressTypes: { prod: ['xch'], testnet: ['txch'] },
+        validator: ChiaValidator
+    }
 ];
 
 
