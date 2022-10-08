@@ -600,13 +600,7 @@ var CURRENCIES = [{
         symbol: 'cro',
         bech32Hrp: { prod: ['cro'], testnet: ['tcro']},
         validator: BIP173Validator,
-    },
-    // {
-    //     name: 'Crypto.com Coin',
-    //     symbol: 'cro',
-    //     validator: ETHValidator,
-    // },
-    {
+    }, {
         name: 'Multi-collateral DAI',
         symbol: 'dai',
         validator: ETHValidator,
@@ -836,6 +830,14 @@ var CURRENCIES = [{
         validator: Base58Validator,
         maxLength: 44,
         minLength: 43
+    }, {
+        name: 'Binance',
+        symbol: 'bnb',
+        validator: BinanceValidator,
+    }, {
+        name: 'Binance Smart Chain',
+        symbol: 'bsc',
+        validator: ETHValidator,
     }, {
         name: 'Fortuna',
         symbol: 'fota',
@@ -1265,16 +1267,6 @@ var CURRENCIES = [{
         symbol: 'luniverse',
         validator: ETHValidator,
     }, {
-        name: 'Binance Smart Chain',
-        symbol: 'bsc',
-        validator: ETHValidator,
-    },
-    {
-        name: 'Binance',
-        symbol: 'bnb',
-        validator: BinanceValidator,
-    }, 
-    {
       name: 'EOS',
       symbol: 'eos',
       validator: EOSValidator,
@@ -1283,8 +1275,7 @@ var CURRENCIES = [{
         symbol: 'xvg',
         addressTypes: { prod: ['1e'], testnet: ['6F'] },
         validator: BTCValidator,
-    },
-    {
+    }, {
         name: 'Zilliqa',
         symbol: 'zil',
         validator: ZILValidator
