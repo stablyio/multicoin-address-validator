@@ -8812,16 +8812,12 @@ module.exports = {
 },{"./crypto/base58":50,"./crypto/segwit_addr":56,"./crypto/utils":58,"buffer":5}],48:[function(require,module,exports){
 var bech32 = require('./crypto/bech32');
 
-const isValidAddress = function(address) {
-    // hack to validate testnet address
-    if (address && address.substring(0, 4) === 'txch') {
-        // remove leading 't' - now can validate
-        address = address.substring(1, address.length);
-    }
+const validHrp = ['xch', 'txch']
 
+const isValidAddress = function(address) {
     const decoded = bech32.decode(address, bech32.encodings.BECH32M);
 
-    if (decoded && decoded.hrp.toLowerCase() === 'xch') {
+    if (decoded && validHrp.includes(decoded.hrp.toLowerCase())) {
       return true
     }
 
@@ -13438,6 +13434,10 @@ var CURRENCIES = [{
         name: 'Harmony',
         symbol: 'one',
         validator: HarmonyValidator
+    }, {
+        name: 'DigitalBits',
+        symbol: 'xdb',
+        validator: XLMValidator
     }
 ];
 

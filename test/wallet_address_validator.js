@@ -915,7 +915,7 @@ describe('WAValidator.validate()', function () {
             valid('xch1ed7yctrag8s5su35qs6pxjzfzwng9hnt3txd5gvkkr0rg9serq4sp9g6n5', 'xch')
             valid('xch1w0mjfntrxz79uacsfarm4jukqegewcgzyduw8k9fcc70lnls24ms8gax6y', 'xch')
             // testnet
-            valid('txch16rdrw2lktf729jtz0kc0hjuzr65akgx9d56j74f0xfsemp08njuq2a4j5e', 'xch')
+            valid('txch16rdrw2lktf729jtz0kc0hjuzr65akgx9d56j74f0xfsemp08njuq86jy42', 'xch')
         });
 
         it('should return true for correct Harmony addresses', function () {
@@ -925,6 +925,14 @@ describe('WAValidator.validate()', function () {
             // ONE format
             valid('one1gu0kda66ly3c5taz8w3rsc44j4csn7epatrzvl', 'one');
             valid('one1ve87javqpzee3h2nv6lv7p70x39wtnzjg4vx80', 'one');
+        });
+
+        it('should return true for correct digitalbits addresses', function () {
+            valid('GAHTKNX226D5LRBOLKIHGIRZ5CDLEV6LT2Z3GBNWU6ASW7DLSI7HC6CG', 'digitalbits');
+            valid('GBJRD43O3CHV4T5ILK7ITB722E42PSAANL33F4NI47PVF5TNXI4FUXSS', 'xdb');
+            valid('GBVI4U5B6R6W25KQG5OONKSFSCF4PESMFUDVIN5KAZAVXP2WC3ZWONWT', 'xdb');
+            valid('GA7X22PK5M3EWRKKODPPGCLLGVUQK32IIMD2F3XDSXUTEGORJKCLMP2H', 'xdb', 'testnet');
+            valid('GC2W627ONUU23SSO3H4FKAAESEGRAVZMVI2YIG7LAYSHYVOLWEHT6QYS', 'xdb', 'testnet');
         });
 
     });
@@ -1669,6 +1677,7 @@ describe('invalid results', function () {
        invalid('zil1pk6fe395e9lfkglv0m70daezm5en0t62hty7f7', 'xch')
        invalid('bnb1ed7yctrag8s5su35qs6pxjzfzwng9hnt3txd5gvkkr0rg9serq4sp9g6n5', 'xch')
        invalid('thisisnotvalid0923492349239492349003jasdf90asd9adf92022123hnk3', 'xch')
+       invalid('txch16rdrw2lktf729jtz0kc0hjuzr65akgx9d56j74f0xfsemp08njuq2a4j5e', 'xch')
    });
 
    it('should return false for incorrect Harmony addresses', () => {

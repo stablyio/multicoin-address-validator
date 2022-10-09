@@ -1301,6 +1301,10 @@ var CURRENCIES = [{
         name: 'Harmony',
         symbol: 'one',
         validator: HarmonyValidator
+    }, {
+        name: 'DigitalBits',
+        symbol: 'xdb',
+        validator: XLMValidator
     }
 ];
 

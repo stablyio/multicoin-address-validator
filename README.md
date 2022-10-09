@@ -120,6 +120,7 @@ npm install multicoin-address-validator
 * Dent/dent `'Dent'` or `'dent'`
 * Dentacoin/dcn `'Dentacoin'` or `'dcn'`
 * DigiByte/dgb `'DigiByte'` or `'dgb'`
+* DigitalBits/xdb `'DigitalBits'` or `'xdb'`
 * Digitex Futures/dgtx `'Digitex Futures'` or `'dgtx'`
 * DigixDAO/dgd `'DigixDAO'` or `'dgd'`
 * District0x/dnt `'District0x'` or `'dnt'`
@@ -160,6 +161,7 @@ npm install multicoin-address-validator
 * Golem (GNT)/gnt `'Golem (GNT)'` or `'gnt'`
 * Golem/glm `'Golem'` or `'glm'`
 * Groestlcoin/grs `'Groestlcoin'` or `'grs'`
+* Harmony/one `'Harmony'` or `'one'`
 * HOQU/hqx `'HOQU'` or `'hqx'`
 * Hedera Hashgraph/hbar `'Hedera Hashgraph'` or `'hbar'`
 * HedgeTrade/hedg `'HedgeTrade'` or `'hedg'`
