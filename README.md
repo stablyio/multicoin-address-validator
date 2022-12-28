@@ -1,22 +1,18 @@
 # wallet-address-validator
 Simple wallet address validator for validating Bitcoin and other altcoins addresses in **Node.js and browser**.
 
-[![Build Status](https://travis-ci.org/christsim/multicoin-address-validator.svg?branch=master)](https://travis-ci.org/christsim/multicoin-address-validator)
-
-Forked from [ryanralph/altcoin-address](https://github.com/ryanralph/altcoin-address).
-
-**File size is ~17 kB (minifed and gzipped)**.
-
 ## Installation
 
-### NPM
-```
-npm install multicoin-address-validator
+### Git
+```shell
+git clone https://github.com/stablyio/multicoin-address-validator.git
 ```
 
-### Browser
-```html
-<script src="wallet-address-validator.min.js"></script>
+### Tests
+```shell
+cd multicoin-address-validator
+yarn install
+yarn test
 ```
 
 ## API
@@ -248,6 +244,7 @@ npm install multicoin-address-validator
 * Po.et/poe `'Po.et'` or `'poe'`
 * Polkadot/dot `'Polkadot'` or `'dot'`
 * Polymath/poly `'Polymath'` or `'poly'`
+* Polymesh/polyx `'Polymesh'` or `'polyx'`
 * Populous/ppt `'Populous'` or `'ppt'`
 * Power Ledger/powr `'Power Ledger'` or `'powr'`
 * Presearch/pre `'Presearch'` or `'pre'`
