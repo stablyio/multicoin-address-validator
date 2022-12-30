@@ -244,7 +244,7 @@ yarn test
 * Po.et/poe `'Po.et'` or `'poe'`
 * Polkadot/dot `'Polkadot'` or `'dot'`
 * Polymath/poly `'Polymath'` or `'poly'`
-* Polymesh/polyx `'Polymesh'` or `'polyx'`
+* Polymesh `'Polymesh - account address format only'` or `not validating the 'polyx' token`
 * Populous/ppt `'Populous'` or `'ppt'`
 * Power Ledger/powr `'Power Ledger'` or `'powr'`
 * Presearch/pre `'Presearch'` or `'pre'`
