@@ -914,6 +914,17 @@ describe("WAValidator.validate()", function () {
             );
         });
 
+        it("should return true for correct stellar muxed addresses", function () {
+            valid(
+                "MA7QYNF7SOWQ3GLR2BGMZEHXAVIRZA4KVWLTJJFC7MGXUA74P7UJUAAAAAAAAAAAACJUQ",
+                "stellar"
+            );
+            valid(
+                "MA7QYNF7SOWQ3GLR2BGMZEHXAVIRZA4KVWLTJJFC7MGXUA74P7UJUAAAAAAAAAABUTGI4",
+                "stellar"
+            );
+        });
+
         it("should return true for correct xtz(tezos) address", function () {
             valid("tz1Lhf4J9Qxoe3DZ2nfe8FGDnvVj7oKjnMY6", "xtz");
             valid("tz1PyxsQ7xVTa5J7gtBeT7pST5Zi5nk5GSjg", "xtz");
