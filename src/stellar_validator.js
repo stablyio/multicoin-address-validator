@@ -5,7 +5,8 @@ var cryptoUtils = require("./crypto/utils");
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
 
 var base32 = baseX(ALPHABET);
-var regexp = new RegExp("^[" + ALPHABET + "]{56,69}$");
+var regexp = new RegExp("^[" + ALPHABET + "]{56}$");
+var regexpM = new RegExp("^[" + ALPHABET + "]{69}$");
 var ed25519PublicKeyVersionByte = 6 << 3; // G
 const med25519PublicKeyVersionByte = 12 << 3; // M
 
@@ -17,9 +18,10 @@ function swap16(number) {
 
 module.exports = {
     isValidAddress: function (address) {
-        if (regexp.test(address)) {
-            // return this.verifyChecksum(address);
+        if (address.charAt(0) === "M" && regexpM.test(address)) {
             return true;
+        } else if (regexp.test(address)) {
+            return this.verifyChecksum(address);
         }
 
         return false;
