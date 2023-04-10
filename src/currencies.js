@@ -1609,6 +1609,11 @@ var CURRENCIES = [
         symbol: "polyx",
         validator: PolymeshValidator,
     },
+    {
+        name: "Arbitrum",
+        symbol: "arb",
+        validator: ETHValidator,
+    },
 ];
 
 module.exports = {
