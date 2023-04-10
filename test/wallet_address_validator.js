@@ -1392,6 +1392,12 @@ describe("WAValidator.validate()", function () {
             // valid("2F8J7kSbuhvvcCEhzZjJ17CXwfFGSMZaFBmsNihuGQnH8CVm", "polyx");
             // valid("2F8aakkWMbuLqFD1Zc2q3Bss88TTbeazX2MEoCfeUMqk6wo4", "polyx");
         });
+
+        it("should return true for correct arbitrum addresses", function () {
+            valid("0xe17d8Fa6BC62590f840C5Dd35f300F77D55CC178", "arbitrum");
+            valid("0xE89eACE17073663D9c6337Cc2Ca25bc28e5fc82E", "arbitrum");
+            valid("0x194DAFaB3B9B24B181a63F81eE42b322Cd0Db6E5", "arbitrum");
+        });
     });
 
     describe("invalid results", function () {
