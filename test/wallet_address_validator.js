@@ -1398,6 +1398,12 @@ describe("WAValidator.validate()", function () {
             valid("0xE89eACE17073663D9c6337Cc2Ca25bc28e5fc82E", "arbitrum");
             valid("0x194DAFaB3B9B24B181a63F81eE42b322Cd0Db6E5", "arbitrum");
         });
+
+        it("should return true for correct Coreum addresses", function () {
+            valid("core1tvcfvs4kvdruc2j362399ek5g3mqt2vztrujhs", "coreum");
+            valid("core1rm24l7knk9gygpat429p2vxkr38v7cfrzu5usg", "coreum");
+            valid("testcore1un00l6nzdg58htj6e9fmx24433srcxpgdft57e", "coreum", "testnet");
+        });
     });
 
     describe("invalid results", function () {
@@ -2397,5 +2403,11 @@ describe("invalid results", function () {
         invalid("0x000000000000000000000000000000000000000", "one");
         invalid("tone1gu0kda66ly3c5taz8w3rsc44j4csn7epatrzvl", "one");
         invalid("xone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", "one");
+    });
+
+    it("should return false for correct Coreum addresses", () => {
+        invalid("core1tvcfvs4kvdruc2j362399ek5g3mqt2vztrujhs", "coreum",  "testnet");
+        invalid("core1rm24l7knk9gygpat429p2vxkr38v7cfrzu5usg", "coreum",  "testnet");
+        invalid("testcore1un00l6nzdg58htj6e9fmx24433srcxpgdft57e", "coreum");
     });
 });

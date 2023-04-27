@@ -35,6 +35,7 @@ var STEEMValidator = require("./steem_validator");
 var SYSValidator = require("./sys_validator");
 var ZILValidator = require("./zil_validator");
 var PolymeshValidator = require("./polymesh_validator");
+var CoreumValidator = require("./coreum_validator");
 
 // defines P2PKH, P2SH and bech32 address types for standard (prod) and testnet networks
 var CURRENCIES = [
@@ -1613,6 +1614,11 @@ var CURRENCIES = [
         name: "Arbitrum",
         symbol: "arb",
         validator: ETHValidator,
+    },
+    {
+        name: "Coreum",
+        symbol: "core",
+        validator: CoreumValidator,
     },
 ];
 
