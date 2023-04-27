@@ -9,7 +9,10 @@ function isValidAddress(address, currency, opts) {
     const { networkType } = opts || {};
     const decoded = bech32.decode(address, bech32.encodings.BECH32);
 
-    const validByNetworkType = validHrp[networkType] ?? validHrp.main;
+    let validByNetworkType = validHrp[networkType];
+    if (!validByNetworkType) {
+        validByNetworkType = validHrp.main;
+    }
 
     if (decoded && validByNetworkType.includes(decoded.hrp.toLowerCase())) {
         return true;
