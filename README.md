@@ -15,6 +15,13 @@ yarn install
 yarn test
 ```
 
+### Build and commit
+
+Remember to build before commit the code
+```shell
+$ make build
+```
+
 ## API
 
 ##### validate (address [, currency = 'bitcoin'[, networkType = 'prod']])
