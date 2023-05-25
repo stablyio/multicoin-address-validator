@@ -1616,6 +1616,11 @@ var CURRENCIES = [
         validator: ETHValidator,
     },
     {
+        name: "Horizen",
+        symbol: "zen",
+        validator: ETHValidator,
+    },
+    {
         name: "Coreum",
         symbol: "core",
         validator: CoreumValidator,

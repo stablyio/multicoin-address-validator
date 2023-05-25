@@ -1399,6 +1399,12 @@ describe("WAValidator.validate()", function () {
             valid("0x194DAFaB3B9B24B181a63F81eE42b322Cd0Db6E5", "arbitrum");
         });
 
+        it("should return true for correct horizen addresses", function () {
+            valid("0xe17d8Fa6BC62590f840C5Dd35f300F77D55CC178", "horizen");
+            valid("0xE89eACE17073663D9c6337Cc2Ca25bc28e5fc82E", "horizen");
+            valid("0x194DAFaB3B9B24B181a63F81eE42b322Cd0Db6E5", "horizen");
+        });
+
         it("should return true for correct Coreum addresses", function () {
             valid("core1tvcfvs4kvdruc2j362399ek5g3mqt2vztrujhs", "coreum");
             valid("core1rm24l7knk9gygpat429p2vxkr38v7cfrzu5usg", "coreum");
