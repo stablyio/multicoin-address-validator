@@ -2411,6 +2411,12 @@ describe("invalid results", function () {
         invalid("xone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", "one");
     });
 
+    it("should return false for correct Horizen addresses", () => {
+        invalid("0xe17d8Fa6BC62590f840C5Dd35f300F77D55CC1782", "horizen",  "testnet");
+        invalid("e17d8Fa6BC62590f840C5Dd35f300F77D55CC178", "horizen",  "testnet");
+        invalid("0xe17d8Fa6BC62590k840C5Dd35f300F77D55CC178", "horizen");
+    });
+
     it("should return false for correct Coreum addresses", () => {
         invalid("core1tvcfvs4kvdruc2j362399ek5g3mqt2vztrujhs", "coreum",  "testnet");
         invalid("core1rm24l7knk9gygpat429p2vxkr38v7cfrzu5usg", "coreum",  "testnet");
