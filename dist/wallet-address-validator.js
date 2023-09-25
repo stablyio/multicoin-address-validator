@@ -13788,6 +13788,11 @@ var CURRENCIES = [
         symbol: "core",
         validator: CoreumValidator,
     },
+    {
+        name: "Tomochain",
+        symbol: "tomochain",
+        validator: ETHValidator,
+    },
 ];
 
 module.exports = {
