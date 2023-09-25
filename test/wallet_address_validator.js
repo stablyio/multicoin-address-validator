@@ -2422,4 +2422,10 @@ describe("invalid results", function () {
         invalid("core1rm24l7knk9gygpat429p2vxkr38v7cfrzu5usg", "coreum",  "testnet");
         invalid("testcore1un00l6nzdg58htj6e9fmx24433srcxpgdft57e", "coreum");
     });
+
+    it("should return false for correct Tomochain addresses", () => {
+        invalid("core1tvcfvs4kvdruc2j362399ek5g3mqt2vztrujhs", "coreum",  "testnet");
+        invalid("core1rm24l7knk9gygpat429p2vxkr38v7cfrzu5usg", "coreum",  "testnet");
+        invalid("testcore1un00l6nzdg58htj6e9fmx24433srcxpgdft57e", "coreum");
+    });
 });
